@@ -1,0 +1,364 @@
+@charset "UTF-8";
+body {
+  background-color: #555555; }
+
+.wrap {
+  width: 1000px;
+  height: 680px;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #242424;
+  border-bottom: 3px solid #B82525; }
+  .header .header-logo {
+    float: left;
+    width: 160px;
+    height: 50px; }
+    .header .header-logo .logo {
+      display: block;
+      width: 160px;
+      height: 50px;
+      margin-left: 20px;
+      color: #f8f8f8;
+      line-height: 50px;
+      font-size: 22px;
+      letter-spacing: 4px; }
+  .header .input-group {
+    position: relative;
+    float: left;
+    margin-left: 200px;
+    margin-top: 10px; }
+    .header .input-group input {
+      overflow: hidden;
+      width: 260px;
+      height: 30px;
+      margin-left: 30px;
+      padding: 0 25px 0 15px;
+      border: none;
+      border-radius: 15px; }
+    .header .input-group i {
+      position: absolute;
+      top: 6px;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/logo.png") no-repeat -10px -105px;
+      cursor: pointer; }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  background-color: #fff; }
+  .mainPage {
+    width: 100%;
+    height: 100%; }
+    .mainPage .sideLeft {
+      position: relative;
+      float: left;
+      width: 199px;
+      height: 100%;
+      border-right: 1px solid #ddd; }
+      .mainPage .sideLeft .sideLeft-top-item {
+        line-height: 2; }
+        .mainPage .sideLeft .sideLeft-top-item dt {
+          text-indent: 1em; }
+        .mainPage .sideLeft .sideLeft-top-item dd {
+          text-indent: 2em;
+          padding: 5px 0; }
+          .mainPage .sideLeft .sideLeft-top-item dd a {
+            display: block;
+            cursor: pointer; }
+          .mainPage .sideLeft .sideLeft-top-item dd.on, .mainPage .sideLeft .sideLeft-top-item dd:hover {
+            background-color: #d5d5d5; }
+      .mainPage .sideLeft .sideLeft-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #ddd; }
+        .mainPage .sideLeft .sideLeft-bottom .sideLeft-bottom-info {
+          height: 50px; }
+          .mainPage .sideLeft .sideLeft-bottom .sideLeft-bottom-info img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin: 6px; }
+          .mainPage .sideLeft .sideLeft-bottom .sideLeft-bottom-info p {
+            float: left;
+            overflow: hidden;
+            width: 140px;
+            font-size: 12px;
+            line-height: 1.6;
+            white-space: nowrap;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis; }
+            .mainPage .sideLeft .sideLeft-bottom .sideLeft-bottom-info p.info-song {
+              padding-top: 8px; }
+    .mainPage .mainCont {
+      overflow: hidden;
+      position: relative;
+      float: left;
+      width: 800px;
+      height: 100%; }
+      .mainPage .mainCont .main {
+        position: absolute;
+        width: 790px; }
+        .mainPage .mainCont .main table {
+          border-collapse: collapse;
+          width: 100%; }
+          .mainPage .mainCont .main table td {
+            overflow: hidden;
+            height: 40px;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis; }
+          .mainPage .mainCont .main table td:nth-child(1) {
+            width: 80px;
+            text-align: center; }
+          .mainPage .mainCont .main table td:nth-child(2) {
+            width: 300px; }
+          .mainPage .mainCont .main table td:nth-child(3) {
+            width: 170px; }
+          .mainPage .mainCont .main table td:nth-child(4) {
+            width: 310px; }
+        .mainPage .mainCont .main thead {
+          font-weight: bold;
+          text-align: center; }
+          .mainPage .mainCont .main thead td {
+            border: 1px solid #ddd; }
+        .mainPage .mainCont .main tbody {
+          color: #555; }
+          .mainPage .mainCont .main tbody tr.on td:nth-child(1) {
+            background: url("../img/music.png") no-repeat 7px center; }
+          .mainPage .mainCont .main tbody tr:nth-child(even) {
+            background-color: #e8e8e8; }
+          .mainPage .mainCont .main tbody tr:hover {
+            background-color: #d8d8d8; }
+      .scrollBar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 100%; }
+        .scrollBar .block {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #999;
+          border-radius: 5px; }
+    .mainPage .pageCont {
+      width: 100%;
+      border-top: 1px solid #ddd; }
+      .mainPage .pageCont .pageBtn {
+        display: table;
+        margin: 10px auto; }
+        .mainPage .pageCont .pageBtn .page-info {
+          padding: 0 10px; }
+        .mainPage .pageCont .pageBtn button {
+          margin: 0 5px;
+          padding: 5px 10px;
+          border: none;
+          background-color: #333;
+          color: #fff;
+          outline: none;
+          cursor: pointer; }
+  .lyricPage {
+    display: none;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; }
+    .lyricPage .lyricLeft {
+      float: left;
+      width: 450px;
+      margin: 60px 0 0 80px; }
+      .lyricPage .lyricLeft .picBox {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: #ddd;
+        border-radius: 50%;
+        animation: imgrotate 15s linear infinite; }
+@keyframes imgrotate {
+  to {
+    transform: rotate(360deg); } }
+        .lyricPage .lyricLeft .picBox span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url(../img/singlecover.png) no-repeat center/cover; }
+        .lyricPage .lyricLeft .picBox img {
+          margin: 50px;
+          width: 200px;
+          height: 200px; }
+    .lyricPage .lyricRight {
+      float: left;
+      margin-top: 50px; }
+      .lyricPage .lyricRight .songinfo {
+        line-height: 1.6;
+        color: #f5f5f5; }
+        .lyricPage .lyricRight .songinfo h4 {
+          font-size: 24px;
+          font-weight: bold; }
+        .lyricPage .lyricRight .songinfo p span {
+          color: #2857bf;
+          cursor: pointer; }
+      .lyricPage .lyricRight .lyricBox {
+        overflow: hidden;
+        position: relative;
+        width: 360px;
+        height: 300px;
+        margin-top: 30px; }
+        .lyricPage .lyricRight .lyricBox ul.lyricList {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 340px;
+          color: #a2a2ad;
+          line-height: 32px;
+          transition: top 0.5s;
+          font-family: "宋体", sans-serif;
+          font-size: 12px; }
+          .lyricPage .lyricRight .lyricBox ul.lyricList li.on {
+            color: #ff2727f2;
+            font-weight: bold; }
+        .lyricPage .lyricRight .lyricBox .scrollBar {
+          width: 2px; }
+          .lyricPage .lyricRight .lyricBox .scrollBar .block {
+            background: #5b5b5b;
+            opacity: 0.5; }
+    .lyricPage .lyricPage-bg {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bagimg.jpg") no-repeat center/cover;
+      opacity: 0.25; }
+
+.play {
+  height: 60px;
+  background-color: #242424;
+  color: #fff;
+  border-top: 3px solid #B82525; }
+  .play .keys {
+    float: left;
+    margin-left: 50px; }
+    .play .keys span {
+      float: left;
+      width: 25px;
+      height: 25px;
+      margin: 16px 15px 0 0;
+      background: url("../img/playbar_8.png") no-repeat;
+      cursor: pointer; }
+      .play .keys span.prevBtn {
+        background-position: -1px -131px; }
+      .play .keys span.prevBtn:hover {
+        background-position: -31px -131px; }
+      .play .keys span.nextBtn {
+        background-position: -82px -131px; }
+      .play .keys span.nextBtn:hover {
+        background-position: -112px -131px; }
+      .play .keys span.playBtn {
+        width: 32px;
+        height: 32px;
+        margin-top: 12px; }
+      .play .keys span.playing {
+        background-position: -2px -206px; }
+      .play .keys span.playing:hover {
+        background-position: -42px -206px; }
+      .play .keys span.pause {
+        background-position: -2px -167px; }
+      .play .keys span.pause:hover {
+        background-position: -42px -167px; }
+  .play .control {
+    float: left;
+    height: 100%;
+    margin-left: 30px; }
+    .play .control .playtime {
+      float: left;
+      line-height: 60px; }
+      .play .control .playtime span {
+        margin: 0 5px;
+        font-size: 12px; }
+    .play .control .schedule, .play .control .volume {
+      position: relative;
+      float: left;
+      width: 350px;
+      height: 4px;
+      margin: 28px 0 0 20px;
+      background-color: #464647;
+      border-radius: 4px; }
+      .play .control .schedule .red, .play .control .volume .red {
+        width: 10px;
+        height: 4px;
+        background-color: #B82525;
+        border-radius: 4px; }
+      .play .control .schedule .block, .play .control .volume .block {
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer; }
+        .play .control .schedule .block .dot, .play .control .volume .block .dot {
+          display: block;
+          position: relative;
+          top: 5px;
+          left: 5px;
+          width: 6px;
+          height: 6px;
+          background-color: #B82525;
+          border-radius: 50%; }
+    .play .control .volume {
+      width: 100px;
+      margin-left: 100px; }
+      .play .control .volume .volume-icon {
+        position: absolute;
+        left: -30px;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        background: url("../img/playbar_8.png") no-repeat -7px -252px; }
+    .play .control .run-type {
+      float: left;
+      width: 18px;
+      height: 16px;
+      margin: 23px 0 0 35px;
+      background: url("../img/playbar_8.png") no-repeat;
+      cursor: pointer; }
+    .play .control .single {
+      background-position: -69px -348px; }
+      .play .control .single:hover {
+        background-position: -96px -348px; }
+    .play .control .cycle {
+      background-position: -6px -348px; }
+      .play .control .cycle:hover {
+        background-position: -36px -348px; }
+    .play .control .shuffle {
+      background-position: -70px -254px; }
+      .play .control .shuffle:hover {
+        background-position: -97px -254px; }
+    .play .control .lyric-icon {
+      float: left;
+      margin: 17px 0 0 25px;
+      width: 22px;
+      height: 22px;
+      background: url(../img/lyricimg.png) no-repeat 0 0/auto 24px;
+      cursor: pointer; }
+      .play .control .lyric-icon:hover {
+        background-position: -24px 0; }
+
+/*# sourceMappingURL=index.css.map */

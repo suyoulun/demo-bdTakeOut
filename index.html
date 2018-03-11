@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>网易云音乐</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style>
+        *{margin: 0; padding: 0;}
+        body{font-family: Microsoft Yahei,sans-serif; font-size: 14px; color: #000; background-color: #fff;}
+        li{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        img{vertical-align: middle; border: none;}
+        input{outline: none;}
+        
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--[if IE]><script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script><![endif]-->
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="header-logo">
+            <a class="logo" href="#">网页播放器</a>
+        </div>
+        <div class="input-group">
+            <input id="search" type="text" placeholder="搜索音乐、歌手">
+            <i id="searchBtn"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="mainPage">
+            <div class="sideLeft">
+                <div class="sideLeft-top">
+                    <!--<dl class="sideLeft-top-item">-->
+                        <!--<dt>推荐</dt>-->
+                        <!--<dd>发现音乐</dd>-->
+                        <!--<dd>私人音乐</dd>-->
+                        <!--<dd>MV</dd>-->
+                        <!--<dd>朋友</dd>-->
+                    <!--</dl>-->
+                    <!--<dl class="sideLeft-top-item">-->
+                        <!--<dt>我的音乐</dt>-->
+                        <!--<dd>本地音乐</dd>-->
+                        <!--<dd>下载管理</dd>-->
+                        <!--<dd>我的电台</dd>-->
+                        <!--<dd>我的收藏</dd>-->
+                    <!--</dl>-->
+                    <dl class="sideLeft-top-item" id="rankList">
+                        <dt>热门榜单</dt>
+                        <!--<dd>欧美</dd>-->
+                        <!--<dd>日韩</dd>-->
+                        <!--<dd>国产</dd>-->
+                        <!--<dd>其它</dd>-->
+                    </dl>
+                </div>
+                <div class="sideLeft-bottom">
+                    <div class="sideLeft-bottom-info" id="songInfo">
+                        <img src="http://i.gtimg.cn/music/photo/mid_album_90/G/2/003fk65m1ZaCG2.jpg" alt="">
+                        <p class="info-song">我们不一样</p>
+                        <p class="info-singer">大壮</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainCont" id="mainCont">
+                <div class="main">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <td>序号</td>
+                            <td>音乐标题</td>
+                            <td>歌手</td>
+                            <td>专辑</td>
+                        </tr>
+                        </thead>
+                        <tbody id="dataTable">
+                        <!--<tr class="on">
+                            <td>01</td>
+                            <td>意外</td>
+                            <td>薛之谦</td>
+                            <td>意外意外意外意外意外意外意外意外意外意外意外意外意外意外</td>
+                        </tr>
+                        </tr>-->
+                        </tbody>
+                    </table>
+                    <div class="pageCont">
+                        <div class="pageBtn">
+                            <button id="firstPage">首页</button>
+                            <button id="prevPage">上一页</button>
+                            <span class="page-info"></span>
+                            <button id="nextPage">下一页</button>
+                            <button id="lastPage">末页</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollBar">
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+        <div class="lyricPage" id="lyricPage">
+            <div class="lyricLeft">
+                <div class="picBox">
+                    <img src="http://i.gtimg.cn/music/photo/mid_album_300/G/2/003fk65m1ZaCG2.jpg" height="300" width="300"/>
+                    <span></span>
+                </div>
+            </div>
+            <div class="lyricRight">
+                <div class="songinfo">
+                    <h4 class="lyric-song">我们不一样</h4>
+                    <p>歌手： <span class="lyric-singer">大壮</span></p>
+                    <p>专辑： <span class="lyric-album">我们不一样</span></p>
+                </div>
+                <div class="lyricBox">
+                    <ul class="lyricList">
+                        <li>这是一条歌词</li>
+                        <li>这是一条歌词</li>
+                        <li>这是一条歌词</li>
+                        <li>这是一条歌词</li>
+                        <li>这是一条歌词</li>
+                        <li>这是一条歌词</li>
+                    </ul>
+                    <div class="scrollBar">
+                        <div class="block"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lyricPage-bg" style="background-image:url(http://i.gtimg.cn/music/photo/mid_album_300/G/2/003fk65m1ZaCG2.jpg)"></div>
+        </div>
+
+    </div>
+
+    <div class="play" id="player">
+        <audio id="audioTag" type="audio/mp3" src="http://sc1.111ttt.cn:8282/2017/1/11m/11/304112002493.m4a?tflag=1519095601&pin=6cd414115fdb9a950d827487b16b5f97#.mp3"></audio>
+        <div class="keys">
+            <span class="prevBtn"></span>
+            <span class="playBtn playing"></span>
+            <span class="nextBtn"></span>
+        </div>
+        <div class="control">
+            <div class="playtime">
+                <span class="present">00:00</span>/<span class="total">04:11</span>
+            </div>
+            <div class="schedule">
+                <div class="red"></div>
+                <div class="block"><span class="dot"></span></div>
+            </div>
+            <div class="volume">
+                <i class="volume-icon"></i>
+                <div class="red"></div>
+                <div class="block"><span class="dot"></span></div>
+            </div>
+            <div class="run-type cycle"></div>
+            <div class="lyric-icon"></div>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>
+
